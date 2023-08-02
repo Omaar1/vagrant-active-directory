@@ -16,7 +16,7 @@ To get started, install `vagrant` and `virtualbox` and clone this repository. In
 
 **Login to Windows** in using rdesktop with username `EXAMPLE\vagrant` password `vagrant`:
 
-    rdesktop -d EXAMPLE -u vagrant -p vagrant localhost:33389
+    rdesktop -d EXAMPLE -u vagrant -p vagrant localhost:53389
 
 The machine will map the **LDAP** Ports to `7389` (ldap) and `7636` (ldaps) on the `localhost`. Here's the data you may need to connect:
 
@@ -34,7 +34,7 @@ For **SSL and TLS** a self-signed certificate is generated when the machine star
 
     vagrant halt
 
-The box is based on the official Windows Server 2019 Trial images by Microsoft. The installation is **valid for 180 days**. You can simply destroy the machine and set it up again for another trial period.
+The box is based on the official Windows Server 2022 Trial images by Microsoft. The installation is **valid for 180 days**. You can simply destroy the machine and set it up again for another trial period.
 
     vagrant destroy
 
