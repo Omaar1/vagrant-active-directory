@@ -37,6 +37,7 @@ Vagrant.configure("2") do |config|
     cfg.vm.provision "shell", path: "scripts/certificate.ps1", privileged: false, args: "'#{hostname}' '#{domain_fqdn}'"
     cfg.vm.provision "shell", reboot: true
     cfg.vm.provision "shell", path: "scripts/install_adexplorer.ps1", privileged: false
+    cfg.vm.provision "shell", path: "scripts/password_policy.ps1", privileged: false, args: "'#{domain_fqdn}'"
     cfg.vm.provision "shell", path: "scripts/importusers.ps1", privileged: false, args: "'#{domain_fqdn}'"
 
     cfg.vm.provider "virtualbox" do |vb, override|
