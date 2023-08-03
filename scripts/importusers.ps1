@@ -68,7 +68,8 @@ foreach ($User in $ADUsers)
             -MobilePhone $User.mobile `
             -PostalCode $User.postal_code `
             -StreetAddress $User.street `
-            -Title $User.title
+            -Title $User.title `
+            -PasswordNeverExpires $True
 
         if ($User.group1)
         {
