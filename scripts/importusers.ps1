@@ -86,5 +86,19 @@ foreach ($User in $ADUsers)
     }
 }
 
+# custom user with a very long name in UserPrincipalName
+New-ADUser `
+    -SamAccountName "longlong" `
+    -UserPrincipalName "averylongusernamethatisverylong@$domainName" `
+    -Name "Very Long" `
+    -GivenName "Very" `
+    -Surname "Long" `
+    -Enabled $True `
+    -DisplayName "Very Long" `
+    -AccountPassword (convertto-securestring "Foo_b_ar123!" -AsPlainText -Force) `
+    -EmailAddress "longlong@example.com" `
+    -PasswordNeverExpires $True
+
+
 # return success, even if there were warnings or errors above
 exit 0
