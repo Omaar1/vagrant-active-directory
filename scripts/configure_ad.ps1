@@ -1,8 +1,8 @@
 param
 (
-    [string]$domainName = "example.local",
-    [string]$domainNetbiosName = "EXAMPLE",
-    [string]$safeModePass = "Admin123#"
+    [string]$domainName = "redinvoke.local",
+    [string]$domainNetbiosName = "RED",
+    [string]$safeModePass = "P@ssw0rd"
 )
 
 Install-ADDSForest `
