@@ -1,15 +1,15 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-vmname = "dc"
-hostname = "dc"
-domain_fqdn = "example.local"
-domain_netbios = "EXAMPLE"
-domain_safemode_password = "Admin123#"
+vmname = "redinvoke-dc"
+hostname = "redinvoke-dc"
+domain_fqdn = "redinvoke.local"
+domain_netbios = "RED"
+domain_safemode_password = "P@ssw0rd"
 
 Vagrant.configure("2") do |config|
   config.vm.define "dc" do |cfg|
-    cfg.vm.box = "gusztavvargadr/windows-server"
+    cfg.vm.box = "jborean93/WindowsServer2012R2"
     cfg.vm.hostname = hostname
 
     # use the plaintext WinRM transport and force it to use basic authentication.
